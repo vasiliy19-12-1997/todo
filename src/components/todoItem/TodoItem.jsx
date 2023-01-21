@@ -30,7 +30,7 @@ const TodoItem = (props) => {
         />
       </div>
       <div>
-        <MyButton onClick={() => navigate(`/todos/${props.todo.id}`)}>
+        <MyButton onClick={() => navigate(`/todo/${props.todo.id}`)}>
           Open
         </MyButton>
         <MyButton onClick={() => props.remove(props.todo)}>Delete</MyButton>
