@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link className={s.NavbarLinkL} to="/about">
           About
         </Link>
-        <Link className={s.NavbarLinkL} to="/todos">
+        <Link className={s.NavbarLinkL} to="/todo">
           Todos
         </Link>
       </div>

@@ -19,7 +19,7 @@ const AppRouter = () => {
       ))}
 
       {/* если пользователь введет не существующий url, то перейдем к туду листу */}
-      <Route path="/*" element={<Navigate to="/todos" replace />} />
+      <Route path="/*" element={<Navigate to="/todo" replace />} />
     </Routes>
   ) : (
     <Routes>
