@@ -1,24 +1,27 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
 
+import AppRouter from "./components/appRouter/AppRouter";
+import { AuthContext } from "./context/Context";
+import Navbar from "./components/ui/navbar/Navbar";
 function App() {
+  const [isAuth, setIsAuth] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    if (localStorage.getItem("auth")) {
+      setIsAuth(true);
+    }
+    setIsLoading(false);
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Vasya
-        </a>
-      </header>
-    </div>
+    <AuthContext.Provider
+      value={{ isAuth, setIsAuth, setIsLoading, isLoading }}
+    >
+      <BrowserRouter>
+        <Navbar />
+        <AppRouter />
+      </BrowserRouter>
+    </AuthContext.Provider>
   );
 }
 
