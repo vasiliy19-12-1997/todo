@@ -12,5 +12,15 @@
     padding: 12px;
     color: #ffffff;
     margin-top: 15px;
+    @media (max-width: 375px) {
+      padding: 7px;
+      display: block;
+    }
+  }
+}
+@media (max-width: 375px) {
+  body {
+    padding: 20px;
+    display: block;
   }
 }

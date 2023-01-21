@@ -45,7 +45,6 @@ function Todos() {
   };
   return (
     <div>
-      <MyButton onClick={fetching}>Load</MyButton>
       <TodoForm create={createTodo} />
 
       {error && <div>{error}</div>}

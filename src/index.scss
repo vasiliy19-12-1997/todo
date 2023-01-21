@@ -12,3 +12,19 @@ body {
   height: auto;
   margin: 10px;
 }
+@media (max-width: 1200px) {
+  body {
+    padding: 20px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    padding: 20px;
+    display: block;
+  }
+}
