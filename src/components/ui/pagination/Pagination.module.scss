@@ -16,11 +16,9 @@
       padding: 7px;
       display: block;
     }
-  }
-}
-@media (max-width: 375px) {
-  body {
-    padding: 20px;
-    display: block;
+    @media (max-width: 450px) {
+      padding: 7px;
+      display: block;
+    }
   }
 }
